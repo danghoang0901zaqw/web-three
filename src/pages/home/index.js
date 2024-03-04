@@ -62,7 +62,6 @@ export default function HomePage() {
     ) {
       window.ethereum.on("accountsChanged", (account) => {
         setWalletAddress(account[0]);
-        handleGetBalance(account[0]);
       });
     } else {
       toast.error("Please install MetaMask");
